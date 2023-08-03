@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Instalar k6
-        run: curl https://github.com/grafana/k6/releases/download/v0.45.0/k6-v0.45.0-linux-arm64.tar.gz -L
+        run: curl https://github.com/grafana/k6/releases/download/v0.45.0/k6-v0.45.0-linux-amd64.tar.gz -L
              npm install ./k6
       - name: Run K6 tests
         run: k6 run index.js --vus 20 --duration 30s
