@@ -19,6 +19,7 @@ Installing and setting up, to execute the performance tests using K6.
         $ npm init -y
 
 * Install K6 in your project
+
         $ npm install k6
 
 # Run the tests
