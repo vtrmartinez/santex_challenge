@@ -17,6 +17,6 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install k6
       - name: Run K6 tests
         run: k6 run index.js --vus 20 --duration 30s
