@@ -7,15 +7,17 @@ on:
     branches:
     - main
 jobs:
-  test:
-    timeout-minutes: 60
+  k6_load_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - uses: k6io/action@v0.1
       - name: Install dependencies
+        run: npm ci
+      - name: Install k6
         run: npm ci
       - name: Run K6 tests
         run: k6 run index.js --vus 20 --duration 30s
